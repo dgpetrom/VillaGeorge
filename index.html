@@ -26,7 +26,87 @@
           "telephone": "+44-7355063551"
         }
     </script>
+    <script>
+        const imageUrls = [
+            "images/IMG_4015.JPG",
+            "images/IMG_4025.JPG",
+            "images/IMG_4032.JPG",
+            "images/IMG_4033.JPG",
+            "images/IMG_4034.JPG",
+            "images/IMG_4040.JPG",
+            "images/IMG_4052.JPG",
+            "images/IMG_4084.JPG",
+            "images/IMG_4089.JPG",
+            "images/IMG_4091.JPG",
+            "images/IMG_4110.JPG",
+            "images/IMG_4122.JPG",
+            "images/IMG_4125.JPG",
+            "images/IMG_4127.JPG",
+            "images/IMG_4138.JPG",
+            "images/IMG_4140.JPG",
+            "images/IMG_4148.JPG",
+            "images/IMG_4168.JPG",
+            "images/IMG_4172.JPG",
+            "images/IMG_4183.JPG",
+            "images/IMG_4186.JPG",
+            "images/IMG_4187.JPG",
+            "images/IMG_4189.JPG",
+            "images/IMG_4190.JPG",
+            "images/IMG_4191.JPG",
+            "images/IMG_4194.JPG",
+            "images/IMG_4197.JPG",
+            "images/IMG_4199.JPG",
+            "images/IMG_4203.JPG",
+            "images/IMG_4204.JPG",
+            "images/IMG_4206.JPG",
+            "images/IMG_4209.JPG",
+            "images/IMG_4210.JPG",
+            "images/IMG_4213.JPG",
+            "images/IMG_4215.JPG",
+            "images/IMG_4217.JPG",
+            "images/IMG_4219.JPG",
+            "images/IMG_4221.JPG",
+            "images/IMG_4231.JPG",
+            "images/IMG_4232.JPG",
+            "images/IMG_4240.JPG",
+            "images/IMG_4247.JPG",
+            "images/IMG_4251.JPG",
+            "images/IMG_4254.JPG",
+            "images/IMG_4259.JPG",
+            "images/IMG_4266.JPG",
+            "images/IMG_4274.JPG",
+            "images/IMG_4279.JPG",
+            "images/IMG_4291.JPG",
+            "images/IMG_4295.JPG",
+            "images/IMG_4301.JPG",
+            "images/IMG_4308.JPG",
+            "images/IMG_4312.JPG",
+            "images/IMG_4318.JPG",
+            "images/IMG_4336.JPG",
+            "images/IMG_4341.JPG",
+            "images/IMG_4351.JPG",
+            "images/IMG_4368.JPG",
+            "images/IMG_4372.JPG",
+            "images/IMG_4373.JPG",
+            "images/IMG_4382.JPG"
+        ];
 
+        // Add more images here...
+    ];
+
+    // Function to preload images
+    function preloadImages(imageArray) {
+        imageArray.forEach((src) => {
+            const img = new Image();
+            img.src = src;
+        });
+    }
+
+    // Call the preload function when the page loads
+    window.addEventListener('load', () => {
+        preloadImages(imageUrls);
+    });
+    </script>
 </head>
 
 </head>
