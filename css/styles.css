@@ -1,19 +1,49 @@
+/* General styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f0f8ff; /* Light blue background */
+    color: #333;
+}
+
+a {
+    color: #1b75bc; /* Mediterranean blue */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #005f8c; /* Darker blue for hover */
 }
 
 header {
-    background: #333;
+    background: linear-gradient(135deg, #48c9b0, #1b75bc); /* Gradient from green to blue */
     color: white;
-    padding: 10px 0;
+    padding: 20px 0;
     text-align: center;
+    font-size: 2em;
+}
+
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+/* Navigation bar */
+nav {
+    background-color: #1b75bc;
+    padding: 10px 0;
 }
 
 nav ul {
-    list-style: none;
+    list-style-type: none;
+    margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
@@ -24,34 +54,82 @@ nav ul li {
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: #333;
+    color: white;
+    font-size: 1.2em;
     font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
+nav ul li a:hover {
+    background-color: #48c9b0; /* Light green for hover effect */
+}
+
+/* Section styles */
 section {
-    padding: 20px;
+    padding: 40px 20px;
     text-align: center;
 }
 
+section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    color: #1b75bc;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Button styling */
+button {
+    background-color: #1b75bc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #48c9b0;
+}
+
+/* Gallery styles */
 .photo-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    padding: 10px;
+    gap: 15px;
+    padding: 20px;
+    justify-items: center;
 }
 
 .photo-grid img {
     width: 100%;
-    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.photo-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer styling */
 footer {
-    background: #333;
+    background-color: #1b75bc;
     color: white;
+    padding: 20px;
     text-align: center;
-    padding: 10px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.1em;
+    font-weight: 300;
 }
