@@ -177,8 +177,9 @@ footer p {
 /* Gallery container */
 .gallery-container {
     position: relative;
+    width: 75%;  /* Limit the width to 75% of the viewport */
     max-width: 800px;
-    margin: 40px auto;
+    margin: 40px auto; /* Center the container */
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -187,9 +188,11 @@ footer p {
 /* Carousel Images */
 .carousel-image {
     width: 100%;
-    height: auto;
+    max-height: 500px; /* Limit the height to fit the screen */
+    object-fit: cover; /* Maintain the aspect ratio and cover the space */
     display: none;
     animation: springboard 1s ease-in-out forwards;
+    margin: 0 auto;  /* Center the image */
 }
 
 .carousel-image:first-child {
@@ -242,5 +245,15 @@ footer p {
 @media only screen and (max-width: 768px) {
     .gallery-container {
         width: 95%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .gallery-container {
+        width: 100%;
+    }
+
+    .carousel-image {
+        max-height: 300px; /* Adjust for smaller screens */
     }
 }
