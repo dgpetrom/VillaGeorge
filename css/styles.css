@@ -173,3 +173,74 @@ footer p {
         margin: 10px 0;
     }
 }
+
+/* Gallery container */
+.gallery-container {
+    position: relative;
+    max-width: 800px;
+    margin: 40px auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Carousel Images */
+.carousel-image {
+    width: 100%;
+    height: auto;
+    display: none;
+    animation: springboard 1s ease-in-out forwards;
+}
+
+.carousel-image:first-child {
+    display: block; /* Show the first image by default */
+}
+
+/* Springboard animation */
+@keyframes springboard {
+    0% {
+        transform: scale(0.9) translateY(-20px);
+    }
+    50% {
+        transform: scale(1.05) translateY(10px);
+    }
+    100% {
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Navigation buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 10px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Ensure mobile responsiveness */
+@media only screen and (max-width: 768px) {
+    .gallery-container {
+        width: 95%;
+    }
+}
