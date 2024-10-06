@@ -3,21 +3,27 @@ body {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f8ff; /* Light blue background */
+    background-color: #f0f8ff; /* Light background */
     color: #333;
 }
 
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the content */
+}
+
 a {
-    color: #1b75bc; /* Mediterranean blue */
+    color: #5278c9; /* Blue from the pool */
     text-decoration: none;
 }
 
 a:hover {
-    color: #005f8c; /* Darker blue for hover */
+    color: #365c9e; /* Darker blue for hover */
 }
 
 header {
-    background: linear-gradient(135deg, #48c9b0, #1b75bc); /* Gradient from green to blue */
+    background: linear-gradient(135deg, #142211, #5278c9); /* Gradient from green to blue */
     color: white;
     padding: 20px 0;
     text-align: center;
@@ -37,7 +43,7 @@ header p {
 
 /* Navigation bar */
 nav {
-    background-color: #1b75bc;
+    background-color: #5278c9;
     padding: 10px 0;
 }
 
@@ -63,7 +69,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #48c9b0; /* Light green for hover effect */
+    background-color: #142211; /* Dark green for hover effect */
 }
 
 /* Section styles */
@@ -75,7 +81,7 @@ section {
 section h2 {
     font-family: 'Montserrat', sans-serif;
     font-size: 2.5em;
-    color: #1b75bc;
+    color: #5278c9; /* Pool blue */
     margin-bottom: 20px;
 }
 
@@ -86,7 +92,7 @@ section p {
 
 /* Button styling */
 button {
-    background-color: #1b75bc;
+    background-color: #5278c9;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -97,7 +103,7 @@ button {
 }
 
 button:hover {
-    background-color: #48c9b0;
+    background-color: #365c9e;
 }
 
 /* Gallery styles */
@@ -122,7 +128,7 @@ button:hover {
 
 /* Footer styling */
 footer {
-    background-color: #1b75bc;
+    background-color: #5278c9;
     color: white;
     padding: 20px;
     text-align: center;
@@ -132,4 +138,33 @@ footer p {
     margin: 0;
     font-size: 1.1em;
     font-weight: 300;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+    .photo-grid {
+        grid-template-columns: repeat(2, 1fr); /* Reduce columns for tablets */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .photo-grid {
+        grid-template-columns: 1fr; /* One column layout for mobile */
+    }
+
+    header h1 {
+        font-size: 2em; /* Smaller font size for mobile */
+    }
+
+    section h2 {
+        font-size: 2em; /* Adjust font size on mobile */
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
 }
