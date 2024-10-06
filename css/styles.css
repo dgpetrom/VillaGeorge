@@ -3,27 +3,32 @@ body {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f8ff; /* Light background */
+    background-color: #f7f9fc; /* Light neutral background */
     color: #333;
 }
 
+/* Container for 75% width layout */
 .container {
-    width: 90%;
+    width: 75%;
     max-width: 1200px;
-    margin: 0 auto; /* Center the content */
+    margin: 0 auto; /* Center the container */
+    padding-left: 20px;  /* Add some left and right padding */
+    padding-right: 20px; /* Padding to prevent content from touching edges */
 }
 
+/* Anchor link styling */
 a {
-    color: #5278c9; /* Blue from the pool */
+    color: #0071c2; /* Booking.com blue */
     text-decoration: none;
 }
 
 a:hover {
-    color: #365c9e; /* Darker blue for hover */
+    color: #005dab; /* Darker blue for hover */
 }
 
+/* Header styles */
 header {
-    background: linear-gradient(135deg, #142211, #5278c9); /* Gradient from green to blue */
+    background: #003580; /* Booking.com deep blue */
     color: white;
     padding: 20px 0;
     text-align: center;
@@ -43,7 +48,7 @@ header p {
 
 /* Navigation bar */
 nav {
-    background-color: #5278c9;
+    background-color: #0071c2; /* Light blue from Booking.com */
     padding: 10px 0;
 }
 
@@ -69,7 +74,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #142211; /* Dark green for hover effect */
+    background-color: #005dab; /* Darker blue for hover effect */
 }
 
 /* Section styles */
@@ -81,7 +86,7 @@ section {
 section h2 {
     font-family: 'Montserrat', sans-serif;
     font-size: 2.5em;
-    color: #5278c9; /* Pool blue */
+    color: #003580; /* Booking.com deep blue */
     margin-bottom: 20px;
 }
 
@@ -92,7 +97,7 @@ section p {
 
 /* Button styling */
 button {
-    background-color: #5278c9;
+    background-color: #0071c2; /* Booking.com light blue */
     color: white;
     border: none;
     padding: 10px 20px;
@@ -103,7 +108,7 @@ button {
 }
 
 button:hover {
-    background-color: #365c9e;
+    background-color: #005dab; /* Darker blue on hover */
 }
 
 /* Gallery styles */
@@ -128,7 +133,7 @@ button:hover {
 
 /* Footer styling */
 footer {
-    background-color: #5278c9;
+    background-color: #003580; /* Booking.com deep blue */
     color: white;
     padding: 20px;
     text-align: center;
