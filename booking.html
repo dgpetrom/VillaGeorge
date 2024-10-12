@@ -34,7 +34,7 @@
                 initialView: 'dayGridMonth',
                 events: function(fetchInfo, successCallback, failureCallback) {
                     // Fetch events from your Node.js API
-                    axios.get('https://villa-george-backend.onrender.com/api/bookings')
+                    axios.get('https://villa-george-bookings.onrender.com/api/bookings')
                         .then(response => {
                             const events = response.data.map(booking => ({
                                 title: booking.name,
