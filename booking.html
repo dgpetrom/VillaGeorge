@@ -3,31 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Villa George - Booking</title>
+    <title>Villa George - Booking Calendar</title>
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css' rel='stylesheet' />
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
-        <h1>Villa George - Booking</h1>
+        <div class="header-container">
+            <h1>Villa George Booking Calendar</h1>
+        </div>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="amenities.html">Amenities</a></li>
-            <li><a href="booking.html">Booking</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-    </nav>
-
-    <section>
-        <h2>Book Your Stay at Villa George</h2>
-        <p>To make a booking, please contact us at <a href="mailto:dgpetrom@gmail.com">dgpetrom@gmail.com</a> or call us at +44-7355063551.</p>
+    <section class="container">
+        <h2>Check Availability</h2>
+        <div id='calendar'></div>
     </section>
 
     <footer>
-        <p>&copy; 2023 Villa George | Crete, Greece</p>
+        <div class="footer-container">
+            <p>&copy; 2023 Villa George | Crete, Greece</p>
+        </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const calendarEl = document.getElementById('calendar');
+            const calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                events: function(fetchInfo, successCallback, failureCallback) {
+                    // Fetch events from your Node.js API
+                    axios.get('http://localhost:3000/api/bookings')
+                        .then(response => {
+                            const events = response.data.map(booking => ({
+                                title: booking.name,
+                                start: booking.start_date,
+                                end: booking.end_date
+                            }));
+                            successCallback(events);
+                        })
+                        .catch(error => {
+                            failureCallback(error);
+                        });
+                },
+                headerToolbar: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'dayGridMonth,timeGridWeek'
+                }
+            });
+            calendar.render();
+        });
+    </script>
 </body>
 </html>
